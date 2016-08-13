@@ -20,6 +20,6 @@ public class ScheduledJob {
     public static void main(String[] args) {
         Temp command = new Temp();
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
-        ScheduledFuture<?> scheduleTask = scheduler.scheduleWithFixedDelay(command, 1, 3, TimeUnit.SECONDS);
+        ScheduledFuture<?> scheduleTask = scheduler.scheduleWithFixedDelay(command, 5, 1, TimeUnit.SECONDS);
     }
 }
