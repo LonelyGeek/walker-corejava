@@ -54,8 +54,8 @@ public class LongEventMain {
         //发布事件
         RingBuffer<LongEvent> ringBuffer = disruptor.getRingBuffer();
 
-        LongEventProducer producer = new LongEventProducer(ringBuffer);
-//        LongEventProducer producer = new LongEventProducerWithTranslator(ringBuffer);
+//        LongEventProducer producer = new LongEventProducer(ringBuffer); hello world
+        LongEventProducerWithTranslator producer = new LongEventProducerWithTranslator(ringBuffer);// 官方的
 
         ByteBuffer byteBuffer = ByteBuffer.allocate(8);
         for (long l = 0; l < 100; l ++) {
